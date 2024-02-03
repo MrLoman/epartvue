@@ -1,0 +1,196 @@
+/* css Animaties  */
+
+
+/* startanimatie */
+
+.mk_sectie .mk_module { opacity: 0; animation-name: inherit; animation-name: fade;  animation-duration: 0.8s; animation-timing-function: ease-in-out; animation-fill-mode: both; animation-delay: 0s; }
+.mk_sectie .mk_kolom.start .mk_module { animation-name: fade; }
+
+.mk_sectie .mk_module.mk_afbeelding.kader { animation-delay: 0.2s; }
+.mk_sectie .mk_kolom.start .mk_module.mk_afbeelding.kader { animation-name: faderight; }
+.mk_sectie.omdraaien .mk_kolom.start .mk_module.mk_afbeelding.kader { animation-name: fadeleft }
+
+
+.mk_sectie .mk_kolom.start .mk_module.mk_fadeleft { animation-name: fadeleft; }
+.mk_sectie .mk_kolom.start .mk_module.mk_fadebottom { animation-name: fadebottom; }
+.mk_sectie .mk_kolom.start .mk_module.mk_fadetop { animation-name: fadetop; }
+.mk_sectie .mk_kolom.start .mk_module.mk_faderight { animation-name: faderight; }
+
+// .mk_sectie .mk_kolom.start .mk_module.mk_slideleft { animation-name: slideleft; }
+// .mk_sectie .mk_kolom.start .mk_module.mk_slidebottom { animation-name: slidebottom; }
+// .mk_sectie .mk_kolom.start .mk_module.mk_slidetop { animation-name: slidetop; }
+// .mk_sectie .mk_kolom.start .mk_module.mk_slideight { animation-name: slideright; }
+
+// afbeeldingen
+.mk_sectie .mk_kolom .mk_afbeelding.mk_slideleft { animation-name: inherit !important; opacity: 1; }
+.mk_sectie .mk_kolom .mk_afbeelding.mk_slideleft > div { overflow: hidden; }
+.mk_sectie .mk_kolom .mk_afbeelding.mk_slideleft img { visibility: hidden; animation-name: inherit; animation-duration: 0.8s; animation-timing-function: ease-in-out; animation-fill-mode: both; animation-delay: 0s; }
+.mk_sectie .mk_kolom.start .mk_afbeelding.mk_slideleft img { visibility: visible; animation-name: slideleft; }
+
+.mk_sectie .mk_kolom .mk_afbeelding.mk_slidebottom { animation-name: inherit !important; opacity: 1; }
+.mk_sectie .mk_kolom .mk_afbeelding.mk_slidebottom > div { overflow: hidden; }
+.mk_sectie .mk_kolom .mk_afbeelding.mk_slidebottom img { visibility: hidden; animation-name: inherit; animation-duration: 0.8s; animation-timing-function: ease-in-out; animation-fill-mode: both; animation-delay: 0s; }
+.mk_sectie .mk_kolom.start .mk_afbeelding.mk_slidebottom img { visibility: visible; animation-name: slidebottom; }
+
+.mk_sectie .mk_kolom .mk_afbeelding.mk_slidetop { animation-name: inherit !important; opacity: 1; }
+.mk_sectie .mk_kolom .mk_afbeelding.mk_slidetop > div { overflow: hidden; }
+.mk_sectie .mk_kolom .mk_afbeelding.mk_slidetop img { visibility: hidden; animation-name: inherit; animation-duration: 0.8s; animation-timing-function: ease-in-out; animation-fill-mode: both; animation-delay: 0s; }
+.mk_sectie .mk_kolom.start .mk_afbeelding.mk_slidetop img { visibility: visible; animation-name: slidetop; }
+
+.mk_sectie .mk_kolom .mk_afbeelding.mk_slideright { animation-name: inherit !important; opacity: 1; }
+.mk_sectie .mk_kolom .mk_afbeelding.mk_slideright > div { overflow: hidden; }
+.mk_sectie .mk_kolom .mk_afbeelding.mk_slideright img { visibility: hidden; animation-name: inherit; animation-duration: 0.8s; animation-timing-function: ease-in-out; animation-fill-mode: both; animation-delay: 0s; }
+.mk_sectie .mk_kolom.start .mk_afbeelding.mk_slideright img { visibility: visible; animation-name: slideright; }
+
+// delay
+.mk_sectie .mk_kolom .mk_module.mk_delay100 { animation-delay: 100ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay200 { animation-delay: 200ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay300 { animation-delay: 300ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay400 { animation-delay: 400ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay500 { animation-delay: 500ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay600 { animation-delay: 600ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay700 { animation-delay: 700ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay800 { animation-delay: 800ms; }
+
+.mk_sectie .mk_kolom .mk_module.mk_delay100.mk_afbeelding img { animation-delay: 100ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay200.mk_afbeelding img { animation-delay: 200ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay300.mk_afbeelding img { animation-delay: 300ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay400.mk_afbeelding img { animation-delay: 400ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay500.mk_afbeelding img { animation-delay: 500ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay600.mk_afbeelding img { animation-delay: 600ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay700.mk_afbeelding img { animation-delay: 700ms; }
+.mk_sectie .mk_kolom .mk_module.mk_delay800.mk_afbeelding img { animation-delay: 800ms; }
+
+/* startanimatie */
+
+
+/* css Animaties  */
+
+// @-webkit-keyframes fadetop{0%{opacity:0;-webkit-transform:translateY(-10%)}100%{opacity:1;-webkit-transform:translateX(0)}}
+// @-moz-keyframes fadetop{0%{opacity:0;-moz-transform:translateY(-10%)}100%{opacity:1;-moz-transform:translateX(0)}}
+// @-o-keyframes fadetop{0%{opacity:0;-o-transform:translateY(-10%)}100%{opacity:1;-o-transform:translateX(0)}}
+// @keyframes fadetop{0%{opacity:0;transform:translateY(-10%)}100%{opacity:1;transform:translateX(0)}}
+
+// @-webkit-keyframes fadebottom{0%{opacity:0;-webkit-transform:translateY(10%)}100%{opacity:1;-webkit-transform:translateX(0)}}
+// @-moz-keyframes fadebottom{0%{opacity:0;-moz-transform:translateY(10%)}100%{opacity:1;-moz-transform:translateX(0)}}
+// @-o-keyframes fadebottom{0%{opacity:0;-o-transform:translateY(10%)}100%{opacity:1;-o-transform:translateX(0)}}
+// @keyframes fadebottom{0%{opacity:0;transform:translateY(10%)}100%{opacity:1;transform:translateX(0)}}
+
+// @-webkit-keyframes faderight{0%{opacity:0;-webkit-transform:translateX(10%)}100%{opacity:1;-webkit-transform:translateX(0)}}
+// @-moz-keyframes faderight{0%{opacity:0;-moz-transform:translateX(10%)}100%{opacity:1;-moz-transform:translateX(0)}}
+// @-o-keyframes faderight{0%{opacity:0;-o-transform:translateX(10%)}100%{opacity:1;-o-transform:translateX(0)}}
+// @keyframes faderight{0%{opacity:0;transform:translateX(10%)}100%{opacity:1;transform:translateX(0)}}
+
+// @-webkit-keyframes fadeleft{0%{opacity:0;-webkit-transform:translateX(-10%)}100%{opacity:1;-webkit-transform:translateX(0)}}
+// @-moz-keyframes fadeleft{0%{opacity:0;-moz-transform:translateX(-10%)}100%{opacity:1;-moz-transform:translateX(0)}}
+// @-o-keyframes fadeleft{0%{opacity:0;-o-transform:translateX(-10%)}100%{opacity:1;-o-transform:translateX(0)}}
+// @keyframes fadeleft{0%{opacity:0;transform:translateX(-10%)}100%{opacity:1;transform:translateX(0)}}
+
+
+@-webkit-keyframes fadetop{0%{opacity:0;-webkit-transform:translateY(-40px)}100%{opacity:1;-webkit-transform:translateX(0)}}
+@-moz-keyframes fadetop{0%{opacity:0;-moz-transform:translateY(-40px)}100%{opacity:1;-moz-transform:translateX(0)}}
+@-o-keyframes fadetop{0%{opacity:0;-o-transform:translateY(-40px)}100%{opacity:1;-o-transform:translateX(0)}}
+@keyframes fadetop{0%{opacity:0;transform:translateY(-40px)}100%{opacity:1;transform:translateX(0)}}
+
+@-webkit-keyframes fadebottom{0%{opacity:0;-webkit-transform:translateY(40px)}100%{opacity:1;-webkit-transform:translateX(0)}}
+@-moz-keyframes fadebottom{0%{opacity:0;-moz-transform:translateY(40px)}100%{opacity:1;-moz-transform:translateX(0)}}
+@-o-keyframes fadebottom{0%{opacity:0;-o-transform:translateY(40px)}100%{opacity:1;-o-transform:translateX(0)}}
+@keyframes fadebottom{0%{opacity:0;transform:translateY(40px)}100%{opacity:1;transform:translateX(0)}}
+
+@-webkit-keyframes faderight{0%{opacity:0;-webkit-transform:translateX(40px)}100%{opacity:1;-webkit-transform:translateX(0)}}
+@-moz-keyframes faderight{0%{opacity:0;-moz-transform:translateX(40px)}100%{opacity:1;-moz-transform:translateX(0)}}
+@-o-keyframes faderight{0%{opacity:0;-o-transform:translateX(40px)}100%{opacity:1;-o-transform:translateX(0)}}
+@keyframes faderight{0%{opacity:0;transform:translateX(40px)}100%{opacity:1;transform:translateX(0)}}
+
+@-webkit-keyframes fadeleft{0%{opacity:0;-webkit-transform:translateX(-40px)}100%{opacity:1;-webkit-transform:translateX(0)}}
+@-moz-keyframes fadeleft{0%{opacity:0;-moz-transform:translateX(-40px)}100%{opacity:1;-moz-transform:translateX(0)}}
+@-o-keyframes fadeleft{0%{opacity:0;-o-transform:translateX(-40px)}100%{opacity:1;-o-transform:translateX(0)}}
+@keyframes fadeleft{0%{opacity:0;transform:translateX(-40px)}100%{opacity:1;transform:translateX(0)}}
+
+@-webkit-keyframes fade {0%{opacity:0;}100%{opacity:1;}}
+@-moz-keyframes fade {0%{opacity:0;}100%{opacity:1;}}
+@-o-keyframes fade {0%{opacity:0;}100%{opacity:1;}}
+@keyframes fade {0%{opacity:0;}100%{opacity:1;}}
+
+
+
+@-webkit-keyframes slideright{0%{transform:translateX(100%)}100%{transform:translateX(0)}}
+@-moz-keyframes slideright{0%{transform:translateX(100%)}100%{transform:translateX(0)}}
+@-o-keyframes slideright{0%{transform:translateX(100%)}100%{transform:translateX(0)}}
+@keyframes slideright{0%{transform:translateX(100%)}100%{transform:translateX(0)}}
+
+
+@-webkit-keyframes slideleft{0%{transform:translateX(-100%)}100%{transform:translateX(0)}}
+@-moz-keyframes slideleft{0%{transform:translateX(-100%)}100%{transform:translateX(0)}}
+@-o-keyframes slideleft{0%{transform:translateX(-100%)}100%{transform:translateX(0)}}
+@keyframes slideleft{0%{transform:translateX(-100%)}100%{transform:translateX(0)}}
+
+
+@-webkit-keyframes slidebottom{0%{transform:translateY(100%)}100%{transform:translateY(0)}}
+@-moz-keyframes slidebottom{0%{transform:translateY(100%)}100%{transform:translateY(0)}}
+@-o-keyframes slidebottom{0%{transform:translateY(100%)}100%{transform:translateY(0)}}
+@keyframes slidebottom{0%{transform:translateY(100%)}100%{transform:translateY(0)}}
+
+
+@-webkit-keyframes slidetop{0%{transform:translateY(-100%)}100%{transform:translateY(0)}}
+@-moz-keyframes slidetop{0%{transform:translateY(-100%)}100%{transform:translateY(0)}}
+@-o-keyframes slidetop{0%{transform:translateY(-100%)}100%{transform:translateY(0)}}
+@keyframes slidetop{0%{transform:translateY(-100%)}100%{transform:translateY(0)}}
+
+
+
+// scalein
+@-webkit-keyframes scalein {0%{ opacity: 0; transform: scale(0); }100%{ opacity: 1; transform: scale(1); }}
+@-moz-keyframes scalein {0%{ opacity: 0; transform: scale(0); }100%{ opacity: 1; transform: scale(1); }}
+@-o-keyframes scalein {0%{ opacity: 0; transform: scale(0); }100%{ opacity: 1; transform: scale(1); }}
+@keyframes scalein {0%{ opacity: 0; transform: scale(0); }100%{ opacity: 1; transform: scale(1); }}
+
+
+
+// bounce
+@-webkit-keyframes scrollbutton {0%{ transform:translateY(0) }50%{ transform:translateY(-10px) } 100%{ transform:translateY(0) }}
+@-moz-keyframes scrollbutton {0%{ transform:translateY(0) }50%{ transform:translateY(-10px) } 100%{ transform:translateY(0) }}
+@-o-keyframes scrollbutton {0%{ transform:translateY(0) }50%{ transform:translateY(-10px) } 100%{ transform:translateY(0) }}
+@keyframes scrollbutton {0%{ transform:translateY(0) }50%{ transform:translateY(-10px) } 100%{ transform:translateY(0) }}
+
+
+
+/* css Animaties  */
+
+
+
+// loadspinner
+.loadspinner { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 999999999; }
+.loadspinner .spinner { animation: spinner_rotate 2s linear infinite; z-index: 2; position: absolute; top: 50%; left: 50%; margin: -25px 0 0 -25px; width: 50px; height: 50px; }
+.loadspinner .spinner .path { stroke: $standaard_kleur; stroke-linecap: round;  animation: spinner_path 1.5s ease-in-out infinite; } 
+
+@keyframes spinner_path {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
+
+@keyframes spinner_rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+
+.webshop_overzicht_archive { position: relative; }
+.webshop_overzicht_archive .loadspinner { position: absolute; display: none; height: 50vh; max-height: 100%; }
+.webshop_overzicht_archive.loading > ul.products { opacity: 0.5; }
+
+.webshop_overzicht_archive.loading .loadspinner { display: block; }

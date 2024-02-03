@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+
+// fonts
+$fontfamily: 'Inter', 'sans-serif';
+$fontfamily_menu: 'Inter', 'sans-serif';
+$fontfamily_quote: 'Inter', 'sans-serif';
+$fontfamily_h1: 'Inter', 'sans-serif';
+$fontfamily_h2: 'Inter', 'sans-serif';
+$fontfamily_h3: 'Inter', 'sans-serif';
+$fontfamily_h4: 'Inter', 'sans-serif';
+$fontfamily_h5: 'Inter', 'sans-serif';
+
+
+// lineheight
+$lineheight: 1.5em;
+$lineheight_menu: 1.5em;
+$lineheight_h1: 1.286em;
+$lineheight_h2: 1.091em;
+$lineheight_h3: 1.333em;
+$lineheight_h4: 1.25em;
+$lineheight_h5: 1.5em;
+
+
+// font size
+$fontsize: 1.6rem;
+$fontsize_groot: 2rem;
+$fontsize_menu: 1.6rem;
+$fontsize_titel_groot: 7rem; // mk_titel.groot h1 & h2
+$fontsize_h1: 4rem; // h1, h2
+$fontsize_h2: 3.5rem; // h2
+$fontsize_h3: 3rem; //h3
+$fontsize_h4: 2.4rem; //h4
+$fontsize_h5: 2rem; //h5
+
+
+// mobile
+$m_fontsize_titel_groot: 12vw; // mk_titel.groot h1 & h2 10vw; // mk_titel.groot h1 & h2
+$m_fontsize_h1: 10vw; // h1, h2 10vw; // mk_titel.groot h1 & h2
+$m_fontsize_h2: 8vw; // h2 8vw; // h1, h2
+$m_fontsize_h3: 7vw; //h3 7vw; // h3
+$m_fontsize_h4: 6vw; //h4 6vw; //h4
+$m_fontsize_h5: 5vw; //h5 5vw; //h5
+
+
+// letterspacing
+$letterspacing: 0em;
+$letterspacing_menu: 0em;
+$letterspacing_h1: 0.02em; // h1, h2
+$letterspacing_h2: 0em; // h2
+$letterspacing_h3: 0em; //h3
+$letterspacing_h4: 0em; //h4
+$letterspacing_h5: 0em; //h5
+
+
+// fontweight
+$fontweight: 400;
+$fontweight_menu: 400;
+$fontweight_h1: 700; // h1, h2
+$fontweight_h2: 700; // h2
+$fontweight_h3: 400; //h3
+$fontweight_h4: 400; //h4
+$fontweight_h5: 400; //h5
+
+
+
+// voor later
+@mixin h1 () { font-size: $fontsize_h1; font-family: $fontfamily_h1; font-weight: $fontweight_h1; line-height: $lineheight_h1; color: inherit; }
+@mixin h2 () { font-size: $fontsize_h2; font-family: $fontfamily_h2; font-weight: $fontweight_h2; line-height: $lineheight_h2; color: inherit; }
+@mixin h3 () { font-size: $fontsize_h3; font-family: $fontfamily_h3; font-weight: $fontweight_h3; line-height: $lineheight_h3; color: inherit; }
+@mixin h4 () { font-size: $fontsize_h4; font-family: $fontfamily_h4; font-weight: $fontweight_h4; line-height: $lineheight_h4; color: inherit; }
+@mixin h5 () { font-size: $fontsize_h5; font-family: $fontfamily_h5; font-weight: $fontweight_h5; line-height: $lineheight_h5; color: inherit; }

@@ -1,0 +1,85 @@
+/* Header */
+#full_header { background-color: transparent; border-top: 40px solid #000; color: #fff; position: relative; top: 0; left: 0; width: 100%; z-index: 999; }
+#full_header.sticky { position: sticky; }
+#full_header.fixed { position: fixed; }
+
+// ingelogd
+body.logged-in.admin-bar #full_header { top: 32px; }
+@media screen and (max-width:782px) { body.logged-in.admin-bar #full_header { top: 46px; } } 
+@media screen and (max-width:600px) { body.logged-in.admin-bar #full_header { top: 0px; } } 
+
+
+
+
+// Header indeling
+@media only screen and (min-width: 980px) {
+    #full_header .mk_rij { position: static;  padding: 0; }
+    #full_header .mk_rij .mk_rij_inner {  display: grid; padding: 15px 0; grid-template-columns: repeat(12, 1fr); grid-column-gap: 0px; grid-row-gap: 0px; }
+        
+    
+    #full_header #top_header { grid-area: 1 / 4 / 2 / 13; display: flex; justify-content: end; gap: 20px; }
+    #full_header #mk_logo_holder { grid-area: 1 / 1 / 3 / 4; align-items: center; display: grid; max-width: 220px; }
+    #full_header #menu_header { grid-area: 1 / 4 / 3 / 13; display: flex; gap: 40px; align-items: center; } 
+}
+
+@media only screen and (max-width: 980px) {
+    #full_header .mk_rij .mk_rij_inner { padding: 15px 0; display: flex; gap: 20px; align-items: center; }
+    #full_header #mk_logo_holder { margin-right: auto; width: 100%; max-width: 220px; }
+
+    #full_header #top_header { width: fit-content; margin-left: auto; }
+    #full_header #menu_header { width: fit-content; }
+}
+
+
+// nieuwe submenus
+body.paginascroll #full_header > .full_header_inner,
+body:not(.home) #full_header > .full_header_inner { background-color: #363636; transition: 500ms; border-top: 2px solid #ffa800; }
+
+#full_header > .full_header_inner.subfullrij .mk_rij_inner { background-color: transparent; }
+
+#full_header .full_header_inner.subfullrij > .mk_rij { position: relative; background-color: inherit; }
+#full_header .full_header_inner.subfullmenu .menu-hoofdmenu-container { position: relative; }
+
+
+
+/*logo*/
+#mk_logo_holder a { width: 100%; }
+
+
+
+/*Info*/
+#mk-info { display: flex; align-items: center; gap: 20px; }
+#mk-info > div { display: flex; align-items: center; font-size: 15px; gap: 10px;  }
+#mk-info > div a { display: flex; align-items: center; color: inherit; gap: 10px; }
+#mk-info > div a::before { content: ""; display: inline-block; width: 20px; line-height: 0; }
+// #mk-info > .mk_telefoon a::before { content: url("../../images/tel.svg"); }
+// #mk-info > .mk_email a::before { content: url("../../images/email.svg"); }
+
+@media only screen and (max-width:768px) {
+    #full_header #mk-info > div a > span { display: none; }
+    #full_header #mk-info > div a::before { width: 24px; }
+}
+
+
+
+// .mk_sectie.header { background-color: $kleur_light; }
+// .mk_sectie.header h1 { }
+.mk_sectie.header .mk_afbeelding_inner { max-width: 450px; margin: 0 auto; }
+
+
+// wpml-ls-statics-shortcode_actions
+.wpml-ls-statics-shortcode_actions { width: 70px; min-width: 70px; }
+.wpml-ls-legacy-dropdown a { border: 0px; padding-right: 10px !important; background: transparent !important; display: flex; align-items: center; }
+.wpml-ls-legacy-dropdown .wpml-ls-flag { transition: 200ms; border-radius: 100px;width: 24px; height: 24px;  max-width: inherit; object-fit: cover; }
+.wpml-ls-legacy-dropdown .wpml-ls-sub-menu { border: 0px; width: fit-content; background-color: #fff; border-radius: 0 0 10px 10px; padding-top: 10px; padding-bottom: 5px; }
+.wpml-ls-legacy-dropdown .wpml-ls-sub-menu .wpml-ls-flag:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+// .wpml-ls-legacy-dropdown a.wpml-ls-item-toggle::after { min-width: 12px; right: 0; top: 0; position: relative; content: url("../../images/down-arrow.svg"); display: inline-block; width: 12px; line-height: 0; margin-left: 6px; border: 0; }
+
+#wpadminbar .ab-submenu .ab-item { display: flex; gap: 10px; align-items: center; }
+#wpadminbar .ab-submenu .ab-item img { width: 18px; height: 12px; }
+
+
+
+// parrallaxheader
+// .parrallaxheader {  }
+.parrallaxheader .mk_afbeelding img { width: 100%; } 

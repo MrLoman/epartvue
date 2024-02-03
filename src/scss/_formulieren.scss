@@ -1,0 +1,162 @@
+/* Formulieren V2 */
+.gform_wrapper { margin: 0 !important; }
+.gform_wrapper .gform_heading { margin: 0; display: none;}
+
+.gform_wrapper.gravity-theme .gform_fields { grid-row-gap: 10px !important; }
+.gform_wrapper .gform_fields .gfield .ginput_container { margin: 0; }
+
+// labels
+.gform_wrapper.gravity-theme .gform_fields .gfield { position: relative; }
+.gform_wrapper.gravity-theme .gform_fields .gfield label.gfield_label { display: block; font-weight: 400; margin-bottom: 5px; position: absolute; transition: 200ms; -webkit-transition: 200ms; line-height: 1em; pointer-events: none; left: 15px; top: 28px; transform: translateY(-50%); -webkit-transform: translateY(-50%); }
+.gform_wrapper.gravity-theme .gform_fields .gfield.active label.gfield_label { top: 15px; font-size: 14px; font-weight: 700; }
+.gform_wrapper.gravity-theme .gform_fields .gfield.stayactive label.gfield_label { top: 15px; font-size: 14px; font-weight: 700; z-index: 99; pointer-events: none; }
+.gform_wrapper.gravity-theme .gform_fields .gfield legend.gfield_label { position: relative; left: 0; top: 0; font-size: 16px; margin-bottom: 5px; }
+.gform_wrapper.gravity-theme .gform_fields .gfield.fileupload .gfield_label { position: relative; left: 0; top: 0; transform: none; font-weight: 700; line-height: inherit; margin-bottom: 5px; }
+
+
+// Velden
+.gform_wrapper input[type=email], .gform_wrapper input[type=tel],
+.gform_wrapper input[type=text], .gform_wrapper select, .gform_wrapper textarea { line-height: inherit !important; min-height: 1px !important; font-family: $fontfamily; outline: none !important; line-height: 1.94em !important; border: 1px solid #E2E4E5; background: #fff; padding: 12px 15px !important; border-radius: 0px; display: block; width: 100% !important; font-size: 16px !important;}
+.gform_wrapper input[type=email]:hover, .gform_wrapper input[type=tel]:hover,
+.gform_wrapper input[type=text]:hover, .gform_wrapper select:hover, .gform_wrapper textarea:hover {border: 1px solid #ccc;}
+
+.gform_wrapper.gravity-theme input[type=text], .gform_wrapper.gravity-theme textarea { padding: 20px 15px 6px 15px !important; }
+.gform_wrapper.gravity-theme select { padding: 20px 15px 6px 14px !important;  }
+
+textarea, input:not([type=checkbox]):not([type=radio]), select { -webkit-appearance: none; }
+
+
+// class options
+.gform_wrapper.gravity-theme .gform_fields .gfield.gf_hide { visibility: hidden; opacity: 0; height: 0; padding: 0; margin: 0; position: absolute; }
+
+
+
+// footer
+.gform_wrapper .gform_footer { padding: 0 !important; margin: 30px 0 0 0 !important; }
+// .gform_wrapper .mk_button { padding-right: 65px; font-family: $fontfamily;  min-height: 1px !important; line-height: inherit !important;  cursor: pointer; border: 0; margin: 0 !important; float: right; background-image: url('../../images/right-arrow.svg'); background-repeat: no-repeat; background-position: calc(100% - 20px) calc(50% + 0px); background-size: 21px; }
+.gform_wrapper .mk_button:hover { padding-right: 75px; border: 0; }
+
+@media only screen and (max-width: 640px) {
+    .gform_wrapper .mk_button, .gform_wrapper .mk_button:hover { width: 100%; margin-top: 10px !important; padding: 15px 20px 15px 20px !important; background-image: none!important; }
+}
+
+
+//errors
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description{padding-left: 15px;}
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container, .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label{margin: 0 15px;}
+.gform_wrapper .validation_message{font-weight: 400 !important;}
+
+.gform_wrapper .gform_validation_errors { float: left; }
+
+
+// datepicker
+#ui-datepicker-div { margin-top: 0 !important;  }
+body div#ui-datepicker-div[style] {  margin-top: 5px !important; z-index: 9999999999999 !important; padding: 10px !important; }
+.gform-theme-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-calendar .ui-state-disabled .ui-state-default { display: none !important; }
+
+
+#ui-datepicker-div .ui-datepicker-calendar th span { width: 30px; height: 30px; }
+#ui-datepicker-div td, #ui-datepicker-div th { padding: 2px; }
+#ui-datepicker-div .ui-datepicker-calendar td  { width: 30px; height: 30px; }
+#ui-datepicker-div .ui-datepicker-calendar .ui-state-disabled .ui-state-default { width: 30px; height: 30px; }
+#ui-datepicker-div .ui-datepicker-calendar .ui-state-default { width: 30px; height: 30px; }
+#ui-datepicker-div .ui-datepicker-calendar .ui-datepicker-current-day .ui-state-default { background: $standaard_kleur; border-color: $standaard_kleur; }
+
+
+// upload
+.gform_wrapper .gform_drop_area { margin-bottom: 0; padding: 20px; background: rgba(0,0,0,.01); border: 1px dashed #e2e4e5; }
+.gform_wrapper .gform_fileupload_rules { display: none; }
+.gform_wrapper .gform_button_select_files { padding: 10px 20px; font-size: 16px; border: 0; background-color: $standaard_kleur; color: #fff; cursor: pointer; }
+
+
+//placeholder
+.gform_wrapper textarea:-ms-input-placeholder, .gform_wrapper input:-ms-input-placeholder, .gform_wrapper select:-ms-input-placeholder,
+.gform_wrapper textarea::-ms-input-placeholder, .gform_wrapper input::-ms-input-placeholder, .gform_wrapper select::-ms-input-placeholder,
+.gform_wrapper textarea::-webkit-input-placeholder, .gform_wrapper input::-webkit-input-placeholder, .gform_wrapper select::-webkit-input-placeholder,
+.gform_wrapper textarea::placeholder, .gform_wrapper input::placeholder, .gform_wrapper select::placeholder 
+{  color: $tekst_kleur; text-transform: uppercase; letter-spacing: 2px; opacity: 1; }
+
+
+
+
+/* Select veld */
+.gform_wrapper .ginput_container_select { position: relative; }
+.gform_wrapper .ginput_container_select select { cursor: pointer; }
+// .gform_wrapper .ginput_container_select::after { content: url('../../images/arrowdown.svg'); pointer-events: none; line-height: 0; width: 20px; position: absolute; top: 50%; right: 15px; transform: translateY(-50%); -webkit-transform: translateY(-50%); }
+
+.gform_wrapper .gform_fields .gfield.gfield_total label { float: left; position: relative !important; left: 0 !important; margin-right: 20px; }
+.gform_wrapper .gform_fields .gfield.gfield_total .ginput_container { float: left; }
+
+@media only screen and (max-width: 640px) {
+    .gform_wrapper ul.gform_fields li.gfield { width: 100%; }
+}
+
+
+
+
+
+// Meer keuze veld
+.gform_wrapper .gform_fields .gfield .ginput_container_checkbox { margin-bottom: 5px; }
+.gfield .ginput_container_checkbox .gfield_checkbox {  display: flex; gap: 10px 20px; }
+.gfield:not(.gf_horizontaal) .ginput_container_checkbox .gfield_checkbox { flex-direction: column; }
+.gfield .ginput_container_checkbox [type="checkbox"] { position: absolute!important; left: -9999px; }
+.gfield .ginput_container_checkbox .gfield_checkbox label {  position: relative!important; cursor: pointer!important;; left: 0 !important; top: 0 !important; padding-left: 40px; }
+  
+.gfield .ginput_container_checkbox label:before { content: ''; position: absolute; left: 0px; top: 50%; width: 26px;  height: 26px; border: 2px solid #848A90; background: transparent; transform: translateY(-50%); -webkit-transform: translateY(-50%); }
+// .gfield .ginput_container_checkbox label:after { content: url( '../../images/check.svg' ); position: absolute; width: 21px; height: 17px; top: 50%; left: 5px; line-height: 0; background-color: transparent; transition: 200ms; -webkit-ransition: 200ms;  opacity: 0; transform: translateY(-50%) scale(0); -webkit-transform: translateY(-50%) scale(0); }
+
+.gfield .ginput_container_checkbox [type="checkbox"]:checked + label:after {  opacity: 1; transform:  translateY(-50%) scale(1); -webkit-transform: translateY(-50%) scale(1); }
+.gfield .ginput_container_checkbox [type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before { box-shadow: none; border-color: #bbb; background-color: #ddd; }
+.gfield .ginput_container_checkbox [type="checkbox"]:disabled:checked + label:after { color: #999; }
+.gfield .ginput_container_checkbox [type="checkbox"]:disabled + label { color: #aaa }
+
+.ginput_container_checkbox a::after { width: 100%; }
+
+
+
+// Radio veld
+.gform_wrapper .gform_fields .gfield .ginput_container_radio { margin-bottom: 5px; }
+.gfield .ginput_container_radio .gfield_radio { display: flex; gap: 10px 20px; }
+// .gfield:not(.gf_horizontaal) .ginput_container_radio .gfield_radio { flex-direction: column; } //verticaal
+.gfield .ginput_container_radio [type="radio"] { position: absolute!important; left: -9999px; }
+.gfield .ginput_container_radio .gfield_radio label {  position: relative!important; cursor: pointer!important;; left: 0 !important; top: 0 !important; padding-left: 30px; }
+  
+.gfield .ginput_container_radio label:before { content: '';  width: 20px;  height: 20px; border: 2px solid #848A90; border-radius: 100px; position: absolute; left: 0px; top: 50%; background: transparent; transform: translateY(-50%); -webkit-transform: translateY(-50%); }
+.gfield .ginput_container_radio label:after { content: ''; width: 14px; height: 14px;  background-color: $standaard_kleur; border-radius: 100px; position: absolute;  top: 50%; left: 5px; line-height: 0; transition: 200ms; -webkit-ransition: 200ms;  opacity: 0; transform:  translateY(-50%) scale(0); -webkit-transform:  translateY(-50%) scale(0); }
+
+.gfield .ginput_container_radio [type="radio"]:checked + label:after {  opacity: 1; transform: translateY(-50%)  scale(1); -webkit-transform:  translateY(-50%) scale(1); }
+.gfield .ginput_container_radio [type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before { box-shadow: none; border-color: #bbb; background-color: #ddd; }
+.gfield .ginput_container_radio [type="radio"]:disabled:checked + label:after { color: #999; }
+.gfield .ginput_container_radio [type="radio"]:disabled + label { color: #aaa }
+
+
+// sectie
+.gform_wrapper.gravity-theme .gfield.gfield--type-section { padding: 0; border: 0; }
+.gform_wrapper.gravity-theme .gfield.gfield--type-section:not(:first-child) { padding-top: 30px; }
+
+
+
+
+
+/* ML Forms (REST) gravityforms  */
+.mlfroms { display: grid; gap: 40px; }
+.mlfroms .field {  }
+.mlfroms .field label { font-weight: 700; }
+.mlfroms .field input, .mlfroms .field textarea { outline: 0; border: 1px solid #eee; border-radius: 5px; width: 100%; max-width: 100%; padding: 10px 15px;  }
+.mlfroms .field input:hover, .mlfroms .field textarea:hover { border: 1px solid #ccc; }
+// .mlfroms button[type=submit] { border: 0; border-radius: 5px; }
+
+
+
+.mk_afbeelding img { animation: reveal linear forwards; animation-timeline: view(); animation-range: entry; }
+
+@keyframes reveal {
+    0% {
+        clip-path: inset(50%);
+    }
+    100% {
+        clip-path: inset(0%);
+    }
+}

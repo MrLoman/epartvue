@@ -1,0 +1,17 @@
+.service_4 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: $gap_items; text-align: center; }
+.service_4 .item{ box-shadow: 0px 0px 5px rgba(0,0,0,0.2); transform: translateY(0px); transition: 500ms; color: $tekst_kleur; display: grid; gap: $gap_items; font-weight: inherit; background: inherit; padding: 50px 30px; background-color: $tekst_kleur_light; }
+.service_4 .titel { font-weight: 700; font-size: 20px; color: $kleur_donker; transition: 300ms; }
+.service_4 .icon { margin-bottom: 10px; height: 50px; }
+.service_4 .icon svg { width: 50px; height: 50px; fill:$standaard_kleur; transition: 300ms; }
+
+
+.service_4 .item:nth-child(n):hover { transform: translateY(-10px); box-shadow: 0px 0px 5px rgba(0,0,0,0.2); color: $tekst_kleur_light; }
+.service_4 .item:hover svg { fill:$tekst_kleur_light;  }
+.service_4 .item:hover .titel { color: $tekst_kleur_light; }
+
+.service_4 .leesverder { transform: scale(0); box-shadow: 0 0 5px rgba(0,0,0,0.2); position: absolute; width: 50px; height: 50px; border-radius: 100px; display: flex; justify-content: center; align-items: center; background-color: $tekst_kleur_light; left: calc(50% - 25px); bottom: -25px; transition: 500ms; }
+.service_4 .leesverder::before { content: "+"; display: block; color: $standaard_kleur; line-height: 0; font-size: 30px; font-weight: 700; }
+.service_4 .item:hover .leesverder { transform: scale(1); }
+
+.service_4 .item::before { content: ''; width: 100%; height: 0px; position: absolute; left: 0; bottom: 0; z-index: -1; transition: 500ms; background: $standaard_kleur;}
+.service_4 .item:hover::before { height: 100%; }

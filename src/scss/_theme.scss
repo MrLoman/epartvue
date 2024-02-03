@@ -1,0 +1,121 @@
+.mk_sectie.overflow { overflow: hidden; }
+
+/* Buttons */
+.mk_button { cursor: pointer; border: 0; font-size: inherit; font-weight: 700; color: #000; background:$tweede_kleur; padding: 15px 50px; border-radius: 100px; gap: 10px; text-transform: none; text-decoration: none; display: flex; width: fit-content; align-items: center;  transition: 200ms; -webkit-transition:200ms; }
+.mk_button:hover { gap: 20px; background-color: $tweede_kleur_hover; }
+.mk_button::before { content: url('../../src/assets/shopping-cart.svg'); width: 18px; opacity: 1; line-height: 0;  display: inline-block;  position: relative; transition: 200ms; -webkit-transition:200ms;  }
+// .mk_button:hover:after  { opacity: 1; }
+
+
+@each $value in $mk_sectie_list {
+
+    .mk_knop.#{nth($value, 1)} .mk_button { background-color: nth($value, 3); color: nth($value, 2); border: 2px solid nth($value, 2); }
+}
+
+
+
+/* mk_code */
+.mk_code.video .mk_code_inner { padding-top: 56%; position: relative; }
+.mk_code.video .mk_code_inner iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+// modules
+.mk_module.auto:not(.mk_knop) { width: auto; margin-right: 80px; margin-bottom: 15px; }
+.mk_module.auto:not(.mk_knop) + .mk_module.auto:not(.mk_knop) { margin-right: 0; }
+.mk_module.auto:not(.mk_knop) + .mk_module:not(.auto) { clear: left; }
+
+
+/* mk_knop */
+.mk_knop.auto { width: fit-content; padding-right: 10px;  margin-bottom: 15px; display: inline-block; }
+.mk_knop.auto + .mk_module:not(.auto) { clear: left; }
+.mk_knop.noafter .mk_button::after, .mk_knop.noarrow .mk_button::after { display: none; }
+
+.mk_sectie.center .mk_rij .mk_knop.auto, .mk_sectie .mk_rij.center .mk_knop.auto { display: inline-block; float: none; }
+
+
+
+
+
+/*Mk scroll top*/
+.mk_scrolltop {  position: fixed; z-index: 99999; bottom: 125px; padding: 10px; -webkit-border-top-left-radius: 5px; -moz-border-radius-topleft: 5px; border-top-left-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-left-radius: 5px; background: rgba(0,0,0,.4); text-align: center; text-decoration: none; cursor: pointer; right: -40px; transition: 500ms; -webkit-transition: 500ms; }
+.mk_scrolltop.active { right: 0; }
+// .mk_scrolltop:before { content: url('../../images/up.svg'); width: 20px; height: 20px; display: block; line-height: 0;  }
+
+
+
+/* // cookie-notice */
+body #cookie-notice:nth-child(n) { box-shadow: 0 0 10px rgba(0,0,0,0.4); font-family: $fontfamily; bottom: 20px; left: auto; right: 20px; width: 325px;  min-width: 0px; background: #fff !important; border-radius: 8px; }
+body #cookie-notice:nth-child(n) #cn-notice-text { font-family: $fontfamily; color: $tekst_kleur; margin-bottom: 15px; font-size: 15px; }
+body #cookie-notice:nth-child(n) .cn-button { margin: 0; font-size: 15px; letter-spacing: inherit; line-height: 1.47em; font-family: $fontfamily; padding: 10px 25px; border-radius: 100px !important; color: #fff; border-radius: 3px; background-color: $tweede_kleur !important; }
+body #cookie-notice:nth-child(n) .cn-button:hover { background-color: $standaard_kleur !important; }
+body #cookie-notice:nth-child(n) .cn-button:not(:last-child) { margin-right: 10px; }
+body #cookie-notice:nth-child(n) .cookie-notice-container { padding: 40px 30px 30px; }
+body #cookie-notice:nth-child(n) .cn-close-icon { top: 22px;  right: 14px; }
+body #cookie-notice:nth-child(n) .cn-close-icon::before, body #cookie-notice:nth-child(n) .cn-close-icon::after { background-color: $tweede_kleur !important; }
+
+
+
+// mk_kruimelpad
+.mk_kruimelpad { position: relative; margin-top: -20px; font-size: 13px; }
+.mk_kruimelpad > .mk_rij { padding: 0 !important; }
+.mk_kruimelpad .mk_kolom_1_1 { position: relative; top: -15px; }
+
+.mk_rij.kruimelpad { padding: 0; }
+.mk_kruimelpad a { text-transform: capitalize; display: block; position: relative; }
+.mk_kruimelpad a:after { content: ""; display: block; width: 0px; position: absolute; bottom: 0px; left: 0; height: 2px; background-color: $standaard_kleur; transition: 200ms; -webkit-transition: 200ms; }
+.mk_kruimelpad a:hover { text-decoration: none; }
+.mk_kruimelpad a:hover:after { width: 100%; }
+
+.mk_kruimelpad .sep { padding: 0 5px; }
+// .mk_kruimelpad .sep::before { content: url('../../images/arrow.svg'); width: 10px; display: inline-block; line-height: 0; }
+
+.mk_kruimelpad .pad { display: flex; align-items: center; gap: 5px; line-height: 1.4em; flex-wrap: wrap; }
+.mk_kruimelpad .pad > span:not(.sep):last-child { opacity: 0.6; }
+
+// .mk_kruimelpad .home::before { content: url('../../images/home.svg'); width: 20px; display: block; line-height: 0; position: relative; top: -2px; } 
+// .mk_kruimelpad .home::after { display: none; }
+
+
+
+/* socials */
+.socials { display: flex; gap: 10px; }
+.socials a { display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; background-color: $standaard_kleur; border-radius: 100px; transition: 200ms; -webkit-transition: 200ms;}
+.socials a:hover {  background-color: $tweede_kleur; }
+.socials a svg { max-width: 20px; } 
+
+
+
+// mk_overzicht
+.mk_overzicht { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+.mk_overzicht .item { background-color: #fff; color: $tekst_kleur; display: grid; grid-template-rows: 300px auto; box-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+
+.mk_overzicht .item .content { padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+.mk_overzicht .item .afbeelding { position: relative; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #C9CECF; }
+.mk_overzicht .item .afbeelding img { object-fit: cover; object-position: center; max-width: inherit; min-width: 100%; min-height: 100%; }
+
+.mk_overzicht .item .titel { @include h3; text-transform:uppercase; margin-bottom: 20px; }
+.mk_overzicht .item .datum { clear: left; font-size: 15px; }
+
+.mk_overzicht .lezen { color: $standaard_kleur; position: relative; display: inline-block; width: fit-content; }
+.mk_overzicht .lezen::after { bottom: 0; content: ""; display: block; left: 0; width: 100%; height: 2px; background-color: $standaard_kleur; }
+
+@media only screen and (max-width: 980px) {
+  
+    .mk_overzicht { grid-template-columns: repeat(1, 1fr); }
+}
+
+@media only screen and (max-width: 640px) {
+
+    .mk_overzicht .item { grid-template-rows: 56vw auto; }
+}
+
+
+
+// pagination
+.pagination { text-align: center; float: left; width: 100%; }
+.pagination ul { padding: 0; list-style: none; display: inline-block; margin-top: 40px; }
+.pagination ul li { float: left; margin: 0 3px; margin-top: 15px; }
+.pagination ul li a { padding: 8px 15px; background-color: #fff; transition: 200ms; -webkit-transition: 200ms; float: left; }
+.pagination ul li a:hover { background-color: $standaard_kleur; color: #fff; }
+.pagination ul li span:not(.dots) { padding: 8px 15px; background-color: $standaard_kleur; color: #fff; float: left; }
+.pagination ul li span.dots { padding: 8px 10px; float: left; }

@@ -1,0 +1,132 @@
+// voor later
+@mixin position_center () {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin position_center_x () {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+@mixin position_center_y () {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin transition_200ms () {
+    transition: 200ms;
+    -webkit-transition: 200ms;
+}
+
+@mixin transition_500ms () {
+    transition: 500ms;
+    -webkit-transition: 500ms;
+}
+
+
+@mixin transition ($ms) {
+    transition: $ms;
+    -webkit-transition: $ms;
+}
+
+
+//variables theme
+$mksectie_padding: 50px 0px; // 40px 0px;
+$mksectie_padding_mobile: 30px 0px; // 20px 0;
+$mksectie_rij_padding: 50px 0px; //40px 0;
+$mksectie_rij_padding_mobile: 30px 0px; // 20px 0;
+
+$mk_rij_max_width: 1400px; // 1200px;
+$mk_rij_width: 90%; // 80%;
+$mk_rij_width_mobile: 90%; // 90%;
+
+$gap: 50px;
+$gap_items: 20px;
+
+$borderradius: 20px;
+$borderradius_klein: 5px;
+
+$mk_rij_groot: 1700px; // 1700px;
+$mk_rij_breed: 1500px; // 1500px;
+$mk_rij_normaal: 1400px; // 1200px;
+$mk_rij_klein: 1000px; // 1000px;
+$mk_rij_smal: 700px; // 700px;// tekst color
+
+$tekst_kleur: #000000; //#000;
+$tekst_kleur_light: #ffffff; //#fff;//a href: style-theme
+$tekst_kleur_link: #000000; //#000;
+$tekst_kleur_link_hover: #ffffff; //#10a0cb;//kleuren
+
+
+$standaard_kleur: #FFA800; //#10a0cb;
+$standaard_kleur_hover: #FFA800; //#10a0cb;
+$tweede_kleur: #FFA800; 
+$tweede_kleur_hover: #FFA800; 
+
+$mk_sectie_list: (
+lightblauw #00A7CA $tekst_kleur_light $tekst_kleur_light,
+blauw #002D44 $tekst_kleur_light $tekst_kleur_light,
+donkerblauw #010010 $tekst_kleur_light $tekst_kleur_light,
+light #e7e7fd inherit inherit,
+rood #ce2531 $tekst_kleur_light $tekst_kleur_light,
+donker #232323 $tekst_kleur_light $tekst_kleur_light,
+zwart #000 $tekst_kleur_light $tekst_kleur_light,);
+
+$kleur_lightblauw: #00A7CA;
+$kleur_lightblauw2: #2B55E3;
+$kleur_blauw: #002D44;
+$kleur_donkerblauw: #010010;
+$kleur_light: #e7e7fd;
+$kleur_rood: #ce2531;
+$kleur_donker: #232323;
+$kleur_zwart: #000;
+
+
+$kleur_verloop1: #0c0626;
+$kleur_verloop2: #020417;
+
+/*
+
+old
+
+$standaard_kleur: #002D44; //#10a0cb;
+// $standaard_kleur: #00A7CA; //#10a0cb;
+// $standaard_kleur_hover: #009fe3; //#10a0cb;
+$tweede_kleur: #001824; //#c6538c;
+// $tweede_kleur_hover: #003459; //#c6538c;
+
+$mk_sectie_list: (
+lightblauw #00A7CA $tekst_kleur_light $tekst_kleur_light,
+blauw #002D44 $tekst_kleur_light $tekst_kleur_light,
+donkerblauw #001824 $tekst_kleur_light $tekst_kleur_light,
+light #f0f0f0 inherit inherit,
+rood #ff4539 $tekst_kleur_light $tekst_kleur_light,
+donker #232323 $tekst_kleur_light $tekst_kleur_light,
+zwart #000 $tekst_kleur_light $tekst_kleur_light,);
+
+$kleur_lightblauw: #00A7CA;
+$kleur_lightblauw2: #2B55E3;
+$kleur_blauw: #002D44;
+$kleur_donkerblauw: #001824;
+$kleur_light: #f0f0f0;
+$kleur_rood: #ff4539;
+$kleur_donker: #232323;
+$kleur_zwart: #000;
+
+
+*/

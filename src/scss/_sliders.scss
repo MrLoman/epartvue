@@ -1,0 +1,203 @@
+/* Slider */
+.frontpageslider { background: transparent; height: 620px; }
+.frontpageslider .swiper-wrapper .swiper-slide { background-size: cover; background-position: center; }
+.frontpageslider h1 { font-size: 70px;  font-weight: bold; color: #000; line-height: 1em; }
+.frontpageslider h1:after { display: none; }
+.frontpageslider .subtitel {  color: #000; float: left; font-size: 30px; font-weight: 300; margin-top: 10px; width: 100%; line-height: 1em;  }
+
+.frontpageslider .slide-content { margin: 0 auto; max-width: 1200px; width: 80%; height: 100%; }
+.frontpageslider .slide-module { width: 100%; position: relative; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); }
+
+.frontpageslider .swiper-slide h1 { animation-name: inherit; animation-duration: 0.7s; animation-timing-function: ease-in-out; animation-fill-mode: both; animation-delay: 0.2s; opacity: 0 }
+.frontpageslider .swiper-slide .subtitel { animation-name: inherit; animation-duration: 0.7s; animation-timing-function: ease-in-out; animation-fill-mode: both; animation-delay: 0.6s; opacity: 0 }
+.frontpageslider .swiper-slide-active h1 { animation-name: fadeTop; opacity: 1; }
+.frontpageslider .swiper-slide-active .subtitel {animation-name: fadeLeft; opacity: 1; }
+
+.frontslideroverlay { display: none; background-image: initial; height: 136px; margin-top: -136px; position: relative; z-index: 9; background-position: center bottom; }
+
+
+
+/* owl */
+.owl-prev { position: absolute; top: 50%; left: 0px;  transform: translateY( -50%); -webkit-transform: translateY( -50%); }
+// .owl-prev::before { content: url('../../images/arrow.svg');  width: 24px; display: block; padding: 10px; transform: rotateY(180deg); -webkit-transform: rotateY(180deg); }
+.owl-next { position: absolute; top: 50%; right: 0px; transform: translateY(-50%); -webkit-transform: translateY(-50%); }
+// .owl-next::before { content: url('../../images/arrow.svg');  width: 24px; display: block; padding: 10px; }
+
+
+// Module galerij ( OWL )
+.mk_galerij .galerij-carousel { width: 100vw; }
+.mk_galerij .owl-carousel .owl-item { padding: 6px 5px; }
+.mk_galerij .owl-carousel .owl-item a { box-shadow: 0 0 6px rgba(0,0,0,0.3); display: block; border-radius: 20px 20px 0 0; overflow: hidden; }
+.mk_galerij .owl-carousel .owl-item .image { display: flex; overflow: hidden; height: 46vw; max-height: 300px; }
+.mk_galerij .owl-carousel .owl-item img { object-fit: cover; max-width: inherit; width: auto; min-width: 100%; border-radius: 0 0 20px 20px; }
+.mk_galerij .owl-carousel .owl-item .titel { padding: 20px; }
+// end OWL
+
+
+
+/* galerij fancybox lightbox*/
+body .fancybox-container { z-index: 9999999; }
+body .fancybox-thumbs { top: auto; width: auto; bottom: 0; left: 0; right : 0; height: 95px; padding: 10px 10px 5px 10px; box-sizing: border-box; background: rgba(0, 0, 0, 0.3); }
+body .fancybox-show-thumbs .fancybox-inner { right: 0; bottom: 95px; }
+
+.fancybox-button svg path { fill: #fff !important; }
+.fancybox-button[disabled] {  opacity: 0.5 !important; }
+
+.fancybox-button div { background-color: $standaard_kleur; }
+
+
+// Module galerij ( galerij )
+.mk_galerij.view_galerij > .mk_galerij_inner { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+
+
+
+
+
+
+
+
+// Module galerij ( Swiper )
+// galerij default
+.mk_galerij_inner { position: relative; display: flex; flex-direction: column; }
+
+.galerij_swiper_buttons { display: flex; justify-content: end; gap: 10px;}
+.galerij_swiper_buttons .mk_button { cursor: pointer; }
+.galerij_swiper_buttons .mk_button::after { display: none !important; }
+
+.galerij_swiper .swiper-wrapper { padding: 5px 0; }
+.galerij_swiper .item { display: block; overflow: hidden; }
+.galerij_swiper .item .image { display: flex; overflow: hidden; height: 46vw; max-height: 300px; }
+.galerij_swiper .item .image img { object-fit: cover; max-width: inherit; width: auto; min-width: 100%; }
+.galerij_swiper .item .titel { padding: 20px; }
+
+.galerij_swiper_pagination.swiper-pagination-progressbar { display: none; height: 5px; width: 100%; position: relative; margin: 30px 0; }
+.galerij_swiper_pagination .swiper-pagination-progressbar-fill { background-color: $standaard_kleur; }
+
+
+
+/* .galerij 1 */
+.galerij1.galerij_swiper { width: calc(100% + 10px); max-width: inherit; padding: 5px; left: -5px;  }
+.galerij1.galerij_swiper .item .titel { display: none; }
+.galerij1.galerij_swiper .item .image { height: 26vw; max-height: 215px; }
+
+.galerij_swiper_buttons.galerij1 .mk_button { z-index: 99; background-color: $standaard_kleur; width: 50px; height: 50px; padding: 0; border-radius: 0px; display: flex; justify-content: center; align-items: center; }
+.galerij_swiper_buttons.galerij1 .mk_button span { display: none; }
+// .galerij_swiper_buttons.galerij1 .mk_button::before { content: url("../../images/right-arrow.svg"); line-height: 0; width: 20px; display: flex; justify-content: center; }
+
+.galerij_swiper_buttons.galerij1 .galerij_swiper_button_prev { position: absolute; top: 50%; left: 0px; transform: translateY(-50%) translateX(-50%); }
+.galerij_swiper_buttons.galerij1 .galerij_swiper_button_next { position: absolute; top: 50%; right: 0px; transform: translateY(-50%) translateX(50%); }
+.galerij_swiper_buttons.galerij1 .galerij_swiper_button_prev::before { transform: rotateZ(180deg); }
+
+
+
+/* .galerij 2 */
+.galerij2.galerij_swiper { width: 100vw; max-width: 2000px; }
+
+.galerij2.galerij_swiper_buttons { display: none; }
+
+.galerij_swiper.galerij2 { padding-left: 5px; left: -5px; }
+.galerij_swiper.galerij2 .item .titel { display: none; }
+.galerij_swiper.galerij2 .item .image { height: 18vw; max-height: 400px; }
+
+@media only screen and (max-width: 980px) {
+    .galerij2.galerij_swiper { width: 120vw; }
+}
+
+@media only screen and (max-width: 768px) {
+    .galerij2.galerij_swiper { width: 160vw; }
+}
+
+@media only screen and (max-width: 479px) {
+    .galerij2.galerij_swiper { width: calc( 200% + 10px ); }
+}
+
+.galerij2.galerij_swiper .item { box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); }
+.galerij2.galerij_swiper .item .image img { transform: scale(1, 1); transition: 500ms; }
+.galerij2.galerij_swiper .item:hover .image img { transform: scale(1.1, 1.1); }
+
+
+
+/* .galerij 3 */
+.galerij_swiper.galerij3 { width: calc(100% + 10px); max-width: inherit; padding: 5px; left: -5px;  }
+.galerij_swiper.galerij3 .item .titel { display: none; }
+.galerij_swiper.galerij3 .item .image { height: 30vw; max-height: 400px; }
+
+// .galerij_swiper.galerij3 .item { border-radius: 5px; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); }
+
+.galerij_swiper_buttons.galerij3 .mk_button { background-color: transparent; width: 48px; height: 48px; border-radius: 100px; display: flex; justify-content: center; align-items: center; padding: 7px; }
+.galerij_swiper_buttons.galerij3 .mk_button span { display: none; }
+// .galerij_swiper_buttons.galerij3 .mk_button::before { content: url('../../images/arrow-white.svg'); line-height: 0; width: 20px; background-color: #181733; border-radius: 100px; padding: 9px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+
+.galerij_swiper_buttons.galerij3 .galerij_swiper_button_prev { position: absolute; top: 50%; left: -20px; transform: translateY(-50%) translateX(-100%); }
+.galerij_swiper_buttons.galerij3 .galerij_swiper_button_next { position: absolute; top: 50%; right: -20px; transform: translateY(-50%) translateX(100%); }
+.galerij_swiper_buttons.galerij3 .galerij_swiper_button_prev::before { transform: rotateZ(180deg); }
+
+.galerij_swiper_pagination.galerij3 { display: none; }
+.galerij_swiper_pagination.galerij3  { text-align: center; }
+
+@media only screen and (max-width: 1100px) {
+    .galerij_swiper.galerij3 .item .image { height: 40vw; }
+}
+
+
+@media only screen and (max-width: 980px) {
+    .galerij_swiper_pagination.galerij3 { padding-top: 10px; display: flex; justify-content: center; gap: 5px; }
+}
+
+@media only screen and (max-width: 640px) {
+    .galerij_swiper.galerij3 .item .image { height: 70vw; }
+}
+
+
+
+/* .galerij 4 */
+.galerij4.galerij_swiper { padding-left: 5px; left: -5px; }
+.galerij4.galerij_swiper { width: 100vw; max-width: 2000px; }
+
+.galerij4.galerij_swiper .item { box-shadow: 0 3px 6px rgba(0,0,0,.3); border-radius: 10px; }
+
+.galerij4.swiper-pagination-progressbar { display: block; }
+
+@media only screen and (max-width: 980px) {
+    .galerij4.galerij_swiper { width: 120vw; }
+}
+
+@media only screen and (max-width: 768px) {
+    .galerij4.galerij_swiper { width: 160vw; }
+}
+
+@media only screen and (max-width: 479px) {
+    .galerij4.galerij_swiper { width: calc( 200% + 10px ); }
+}
+
+
+
+
+// 
+// .mk_galerij_inner { position: relative; display: flex; flex-direction: column; }
+
+.projecten_swiper_buttons { display: flex; justify-content: end; gap: 10px; display: none; }
+.projecten_swiper_buttons .mk_button { cursor: pointer; }
+.projecten_swiper_buttons .mk_button::after { display: none !important; }
+
+.projecten_swiper .swiper-wrapper { padding: 5px 0; }
+.projecten_swiper .item { display: block; overflow: hidden; }
+
+// .projecten_swiper .item .image { display: flex; overflow: hidden; height: 46vw; max-height: 300px; }
+// .projecten_swiper .item .image img { object-fit: cover; max-width: inherit; width: auto; min-width: 100%; }
+
+.projecten_swiper .item .titel {  font-weight: 700; }
+
+.projecten_swiper_pagination.swiper-pagination-progressbar { display: none; height: 5px; width: 100%; position: relative; margin: 30px 0; }
+.projecten_swiper_pagination .swiper-pagination-progressbar-fill { background-color: $standaard_kleur; }
+
+
+.projecten_swiper .item { position: relative; background-color: #fff; color: $tekst_kleur; display: grid; grid-template-rows: 400px auto; box-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+
+.projecten_swiper .item .content { color: #fff; position: absolute; z-index: 9; bottom: 0; left: 0; width: 100%; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+.projecten_swiper .item .afbeelding { position: relative; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #C9CECF; }
+.projecten_swiper .item .afbeelding img { transform: scale(1, 1); transition: 500ms; object-fit: cover; object-position: center; max-width: inherit; min-width: 100%; min-height: 100%; }
+
+.projecten_swiper .item:hover .afbeelding img { transform: scale(1.1, 1.1); }
+.projecten_swiper .item::after { bottom: 0; left: 0; content: ""; display: block; position: absolute; width: 100%; height: 100px; background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); }

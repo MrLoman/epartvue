@@ -1,0 +1,48 @@
+/* Titels */
+h1 { @include h1(); }
+h2 { @include h2(); }
+h3 { @include h3(); }
+h4 { @include h4(); }
+h5 { @include h5(); }
+
+
+// .mk_module.mk_titel { margin-bottom: 10px; }
+
+
+.mk_titel.noafter > .mk_titel_inner > *:after { display: none; }
+.mk_titel.center { text-align: center; }
+.mk_titel.right { text-align: right; }
+.mk_titel.left { text-align: left; }
+
+.mk_titel.style > .mk_titel_inner > * { font-family: $fontfamily_quote; }
+
+.mk_titel.groot h1, .mk_titel.groot h2 { font-size: $fontsize_h1; }
+.mk_titel.groot h3 { font-size: $fontsize_h2; }
+.mk_titel.groot h4 { font-size: $fontsize_h3; }
+.mk_titel.groot h5 { font-size: $fontsize_h4; }
+
+.mk_titel.klein h1, .mk_titel.klein h2 { font-size: $fontsize_h3; }
+.mk_titel.klein h3 { font-size: $fontsize_h4; }
+.mk_titel.klein h4 { font-size: $fontsize_h5; }
+.mk_titel.klein h5 { font-size: $fontsize; }
+
+
+@media only screen and (max-width: 640px) {
+    
+    /* Titels */
+    h1, h2 { font-size: $m_fontsize_h1; }
+    h3 { font-size: $m_fontsize_h2; }
+    h4 { font-size: $m_fontsize_h3; }
+    h5 { font-size: $m_fontsize_h4; }
+
+    .mk_titel.groot h1, .mk_titel.groot h2 { font-size: $m_fontsize_titel_groot; }
+    .mk_titel.groot h3 { font-size: $m_fontsize_h1; }
+    .mk_titel.groot h4 { font-size: $m_fontsize_h2; }
+    .mk_titel.groot h5 { font-size: $m_fontsize_h3; }
+
+    .mk_titel.klein h1, .mk_titel.klein h2 { font-size: $m_fontsize_h2; }
+    .mk_titel.klein h3 { font-size: $m_fontsize_h3; }
+    .mk_titel.klein h4 { font-size: $m_fontsize_h4; }
+    .mk_titel.klein h5 { font-size: $fontsize; }
+
+}

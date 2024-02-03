@@ -1,0 +1,135 @@
+/* mobile */
+.mk_mobile_menu { position: fixed; background-color: #fff; right: 0; width: 290px; height: 100vh; top: 0; opacity: 1; visibility: hidden; overflow: auto; box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); z-index: 9999999; transform: translateX(290px); -webkit-transform: translateX(290px); } 
+body.paginaloaded .mk_mobile_menu { transition: 500ms; -webkit-transition: 500ms; }
+body.admin-bar .mk_mobile_menu { top: 32px; }
+body.mobilemenu_open .mk_mobile_menu { visibility: visible; opacity: 1; transform: translateX(0); -webkit-transform: translateX(0); }
+
+
+// open close
+.mk_mobile_menu_button { display: none; margin-right: -10px; }
+.mk_mobile_menu_close { display: none; }
+
+
+// logo
+.mk_mobile_menu .logo { padding: 20px; width: 100%; border-bottom: 10px solid #EBEBEB; }
+.mk_mobile_menu .logo a { display: block; }
+.mk_mobile_menu .logo img { max-width: 200px; display: block; }
+
+
+/* menu */
+.mk_mobile_menu ul { text-align: left; }
+.mk_mobile_menu ul li { list-style: none; float: left; width: 100%; position: relative; }
+.mk_mobile_menu ul a { color: #707070; background-color: #fff; text-align: center; font-size: 17px; padding: 10px 15px; display: block; position: relative; }
+// .mk_mobile_menu ul > li > a { }
+.mk_mobile_menu ul > li > a:hover, .mk_mobile_menu ul > li.current-menu-item > a,
+.mk_mobile_menu ul > li > .parentmenu a:hover, .mk_mobile_menu ul > li.current-menu-item > .parentmenu a { color: $standaard_kleur; }
+// .mk_mobile_menu ul > li.menu-item-has-children > a:after { content: url('../../images/down-arrow.svg'); display: inline-block; width: 12px; line-height: 0; position: absolute; top: calc(50% - 6px); right: 10px; }
+
+// .mk_mobile_menu ul.menu > li { border-bottom: 1px solid #C4C4C4; } 
+
+.mk_mobile_menu ul > li > ul.sub-menu { position: relative; width: 100%; float: left; }
+// .mk_mobile_menu ul > li > ul.sub-menu > li:not(:last-child) { border-bottom: 1px solid #C4C4C4; } 
+.mk_mobile_menu ul > li > ul.sub-menu > li > a {  padding: 10px 15px 10px 25px; pointer-events:visible; background-color: #f2f2f2;  }
+.mk_mobile_menu ul > li > ul.sub-menu > li > a:hover, .mk_mobile_menu ul > li > ul.sub-menu > li.current-menu-item > a { color: $standaard_kleur;  }
+// .mk_mobile_menu ul > li > ul.sub-menu > li.menu-item-has-children > a:after { content: url('../../images/down-arrow.svg'); display: inline-block; width: 12px; line-height: 0; position: absolute; top: calc(50% - 6px); right: 10px; }
+
+
+.mk_mobile_menu ul.sub-menu > li.menu-item-has-children > a { color: $standaard_kleur;}
+.mk_mobile_menu ul.sub-menu > li.menu-item-has-children > a::after { display: none !important; }
+.mk_mobile_menu ul > li > ul.sub-menu > li.menu-item-has-children  > a:hover, .mk_mobile_menu ul > li > ul.sub-menu > li.menu-item-has-children.current-menu-item > a { color: $standaard_kleur;  }
+
+.mk_mobile_menu ul > li > ul.sub-menu > li > ul.sub-menu { position: relative; width: 100%; float: left; }
+/* .mk_mobile_menu ul > li > ul.sub-menu > li > ul.sub-menu > li {  } */
+.mk_mobile_menu ul > li > ul.sub-menu > li > ul.sub-menu > li a {   pointer-events:visible;  }
+.mk_mobile_menu ul > li > ul.sub-menu > li > ul.sub-menu > li a:hover, .mk_mobile_menu ul > li > ul.sub-menu > li > ul.sub-menu > li.current-menu-item > a { color: $standaard_kleur;  }
+// .mk_mobile_menu ul > li > ul.sub-menu > li > ul.sub-menu > li.menu-item-has-children > a:after { content: url('../../images/down-arrow.svg'); display: inline-block; width: 12px; line-height: 0; position: absolute; top: calc(50% - 6px); right: 10px; }
+
+
+.mk_mobile_menu .parentmenu { position: relative; }
+.mk_mobile_menu .parentmenu .arrow { position: absolute; right: 0; top: 0; width: 50px; height: 100%; cursor: pointer; display: flex; justify-content: center; align-items: center; }
+// .mk_mobile_menu .parentmenu .arrow:after { content: url('../../images/down-arrow.svg'); width: 14px; }
+
+
+/* options */
+.mk_mobile_menu ul li.span > a { pointer-events: none; }
+
+
+
+.mk_mobile_menu .beforemenu { display: grid; }
+.mk_mobile_menu .menu-hoofdmenu-container  { display: grid; }
+.mk_mobile_menu .aftermenu { display: grid; padding: 40px 10px 20px; gap: 16px; }
+
+.mk_mobile_menu .aftermenu .mk_button { width: 100%; justify-content: center; }
+
+.mk_mobile_menu  .socials { justify-content: center; }
+
+
+/* aftermenu */
+/* mk-info */
+.mk_mobile_menu #mk-info { flex-direction: column; gap: 10px; width: 100%; padding: 20px 0; }
+.mk_mobile_menu #mk-info > div { width: 100%; justify-content: center; }
+
+
+
+@media only screen and (max-width: 980px) {
+    .mk_menu { display: none; }
+    .mk_mobile_menu_button { display: block; }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    body.admin-bar .mk_mobile_menu { top: 46px; }
+}
+
+
+
+@media only screen and (max-width: 640px) {
+
+    .mk_mobile_menu_close { display: block; float: right; padding: 20px 10px 0 20px; position: absolute; right: 0; }
+    .mk_mobile_menu { transform: translateX(100%); -webkit-transform: translateX(100%); width: 100%; } 
+
+}
+
+
+
+
+/* hamburger */
+.hamburger { outline: none; padding: 10px 10px; display: block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: inherit; text-transform: none; background-color: transparent; border: 0; margin: 0; overflow: visible; }
+
+.shiftnav-open .hamburger:hover , .hamburger.is-active:hover { opacity: 0.7; }
+
+.hamburger-box { width: 40px; height: 24px; display: block; position: relative; }
+  
+.hamburger-inner { display: block; top: 50%; margin-top: -2px; }
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after { width: 40px; height: 2px; background-color: #fff; border-radius: 4px; position: absolute;  transition-property: transform; transition-duration: 0.15s; transition-timing-function: ease; }
+.hamburger-inner::before, .hamburger-inner::after { content: "";  display: block; }
+.hamburger-inner::before { top: -10px; }
+.hamburger-inner::after { bottom: -10px; }
+
+/* alle pagina's */
+body .hamburger-inner, body .hamburger-inner::before, body .hamburger-inner::after {  background-color: #000;  }
+
+/* Niet de voorpagina */
+body:not(.home) .hamburger-inner, body:not(.home) .hamburger-inner::before, body:not(.home) .hamburger-inner::after { background-color: #000; }
+
+/* scroll, all pages */
+body.paginascroll .hamburger-inner,  body.paginascroll .hamburger-inner::before,  body.paginascroll .hamburger-inner::after { background-color: #000; } 
+
+/*  Collapse */
+.hamburger--collapse .hamburger-inner { top: auto; bottom: 0; transition-duration: 0.13s; transition-delay: 0.13s;  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+.hamburger--collapse .hamburger-inner::after { top: -20px; transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear; }
+.hamburger--collapse .hamburger-inner::before { transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+
+body.mobilemenu_open .hamburger--collapse .hamburger-inner, .hamburger--collapse.is-active .hamburger-inner { transform: translate3d(0, -10px, 0) rotate(-45deg); transition-delay: 0.22s; transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+body.mobilemenu_open .hamburger--collapse  .hamburger-inner::after, .hamburger--collapse.is-active .hamburger-inner::after { top: 0; opacity: 0; transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }
+body.mobilemenu_open .hamburger--collapse .hamburger-inner::before, .hamburger--collapse.is-active .hamburger-inner::before { top: 0; transform: rotate(-90deg); transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+
+
+/* animatie */
+.mk_mobile_menu ul li.menu-item { opacity: 0; animation-name: inherit; -webkit-animation-name: inherit;  animation-timing-function: ease-in-out; animation-fill-mode: both; animation-duration: 500ms; -webkit-animation-duration: 500ms; animation-delay: 100ms; -webkit-animation-delay: 100ms; }
+body.mobilemenu_open ul li.menu-item { opacity: 1; animation-name: fadeRight; -webkit-animation-name: fadeRight;  }
+
+.mk_mobile_menu .aftermenu { opacity: 0; animation-name: inherit; -webkit-animation-name: inherit;  animation-timing-function: ease-in-out; animation-fill-mode: both; animation-duration: 500ms; -webkit-animation-duration: 500ms; animation-delay: 100ms; -webkit-animation-delay: 100ms; }
+body.mobilemenu_open .mk_mobile_menu .aftermenu { opacity: 1; animation-name: fadeRight; -webkit-animation-name: fadeRight;  }

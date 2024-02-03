@@ -1,0 +1,84 @@
+body { background-color: #363636; color: #fff; }
+
+
+
+
+.producten_overzicht { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+.producten_overzicht .item { position: relative; background-color: #fff; color: $tekst_kleur; display: grid; grid-template-rows: 400px auto; box-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+
+.producten_overzicht .item .content { color: #fff; position: absolute; z-index: 9; bottom: 0; left: 0; width: 100%; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+.producten_overzicht .item .afbeelding { position: relative; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #C9CECF; }
+.producten_overzicht .item .afbeelding img { transform: scale(1, 1); transition: 500ms; object-fit: cover; object-position: center; max-width: inherit; min-width: 100%; min-height: 100%; }
+.producten_overzicht .item .titel { font-weight: 700; }
+
+.producten_overzicht .item:hover .afbeelding img { transform: scale(1.1, 1.1); }
+.producten_overzicht .item::after { bottom: 0; left: 0; content: ""; display: block; position: absolute; width: 100%; height: 100px; background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); }
+
+
+.mk_overzicht .item  { border-radius: 4px; overflow: hidden; }
+.mk_overzicht .item .titel { text-transform: initial; font-size: 2.5rem; }
+// .mk_overzicht .item { grid-template-rows: 400px auto }
+.mk_overzicht .item .afbeelding { background-color: #fff; }
+.mk_overzicht .item .afbeelding img { transform: scale(1, 1); transition: 500ms; max-width: 100%; max-height: 100%; min-height: initial; min-width: initial; }
+
+.mk_overzicht .item:hover .afbeelding img { transform: scale(1.1, 1.1); }
+
+
+
+.mk_overzicht .item { opacity: 0; animation-name: fadebottom;  animation-duration: 0.8s; animation-timing-function: ease-in-out; animation-fill-mode: both; animation-delay: 0s; }
+
+
+
+.mk_tekst.sku > div { opacity: 0.5; }
+
+.mk_afbeelding img { border-radius: 4px; }
+.mk_afbeelding_inner { padding: 30px; background-color: #fff; border-radius: 4px; }
+
+.price { display: flex; gap: 30px; }
+.price.sale .old {  font-size: 16px;  }
+.price.sale .old div { text-decoration: line-through; }
+.price.sale .new { color: $standaard_kleur; font-size: 24px; font-weight: 700; }
+
+.price.sale span { display: grid; }
+.price.sale span > span { opacity: 0.5; font-size: 12px; font-weight: 400; color: #fff; gap: 4px; }
+
+
+
+form { display: grid; gap: 40px; max-width: 400px; width: 100%; }
+.velden { display: grid; gap: 15px; }
+
+.veld .select { position: relative; display: grid; align-items: center; }
+.veld .select select { width: 100%; padding: 15px; border-radius: 4px; border: 1px solid #000; background-color: rgba(255, 255, 255, 0.3); color: #000; }
+.veld .select select:disabled { opacity: 0.5; }
+.veld .select select:not(:disabled) {  cursor: pointer; }
+.veld .select::after { content: url(../../src/assets/chevron-down.svg); width: 16px; position: absolute; right: 15px; line-height: 0; } 
+
+
+.checkbox { display: flex; gap: 10px;  }
+.checkbox label { order: 1; cursor: pointer; }
+.checkbox input { cursor: pointer; }
+
+
+#winkelmand { display: grid; gap: 40px; }
+#winkelmand .item { display: grid; gap: 50px; grid-template-columns: minmax(0, 30px) minmax(0, 150px) minmax(0, 1fr); align-items: center; }
+#winkelmand .item img { border-radius: 4px; }
+#winkelmand .item .details { display: grid; gap: 10px; }
+#winkelmand .item .qty { font-size: 24px; font-weight: 700; }
+#winkelmand .item .titel { font-size: 16px; font-weight: 700; }
+#winkelmand .item .attr { opacity: 0.5; display: flex; flex-wrap: wrap; gap: 10px 30px; }
+#winkelmand .item .price { color: #FFA800; font-size: 24px; font-weight: 700; }
+
+
+@media only screen and (max-width: 640px) {
+
+    #winkelmand .item {
+        grid-template-columns: repeat(2, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
+    } 
+
+    #winkelmand .item .qty { grid-area: 1 / 1 / 2 / 2; }
+    #winkelmand .item .image { grid-area: 1 / 2 / 2 / 3; max-width: 150px; }
+    #winkelmand .item .details { grid-area: 2 / 1 / 3 / 3; } 
+}
+
+

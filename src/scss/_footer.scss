@@ -1,0 +1,58 @@
+/* Footer */
+#main-footer { background-color: $kleur_donkerblauw; line-height: 2em; }
+#main-footer .mk_sectie { padding: 30px 0 !important; }
+#main-footer .mk_sectie .mk_kolom_1_1 {  display: grid; gap: 30px 40px; grid-template-columns: minmax(0, 4fr) minmax(0, 4fr) minmax(0, 4fr); }
+
+    /* footer bloks */
+    .mk_footer:nth-child(n) {  color: #fff; display: grid; gap: 10px; height: fit-content; }
+    .mk_footer a { color: inherit; }
+
+    .mk_footer ul li { list-style: none; }
+    .mk_footer ul.menu li a { font-weight: 700; color: #fff; display: flex; align-items: center; gap: 15px; font-weight: inherit; }
+    .mk_footer ul.menu.koloms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .mk_footer4 { justify-content: end; }
+    .mk_footer1 { gap: 30px !important; }
+    .mk_footer3 { margin-left: auto; width: fit-content; }
+
+    .mk_footer2 .socials { margin: 0 auto; }
+    .mk_footer3 .socials { width: fit-content; margin-left: auto; }
+    .mk_footer3 .gegevens { width: fit-content; margin-left: auto; }
+    // .mk_footer .gegevens span { display: block; color: $kleur_lightblauw; }
+    // .mk_footer h4 { color: $kleur_lightblauw; } 
+    .mk_footer .gegevens h4 { padding-bottom: 10px; }
+
+/* #footer-bottom */
+#footer_bottom {  font-size: 15px; opacity: 0.7; position: relative; color: #fff;  }
+#footer_bottom .mk_rij { gap: 20px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-top: 1px solid #002d44; padding: 15px 0 15px 0; }
+#footer_bottom a { color: inherit; }
+
+.footer_bottom1 { display: flex; gap: 20px; }
+.footer_bottom2 {  display: flex; gap: 20px; justify-content: end; }
+
+.footer_links { display: flex; gap: 0 15px; flex-wrap: wrap; justify-content: center; }
+
+
+
+// repsonsive
+@media only screen and (max-width: 980px) {
+
+    #main-footer .mk_sectie .mk_kolom_1_1 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) ; }
+
+    .mk_footer4 { justify-content: start; }
+}
+
+@media only screen and (max-width: 767px) {
+    #footer-bottom { padding: 15px 0; }
+    #footer-info:nth-child(n) { text-align: center; width: 100%; padding-bottom: 0; margin: 0; }
+
+    #footer_bottom .mk_rij { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .footer_bottom1 { display: grid; text-align: center; justify-content: center; align-items: center; gap: 0; }
+    .footer_bottom2 { justify-content: center; }
+    #footer_bottom { line-height: 1.6em; }
+}
+
+@media only screen and (max-width: 479px) {
+
+    #main-footer .mk_sectie .mk_kolom_1_1 { grid-template-columns: minmax(0, 1fr) ; }
+}
